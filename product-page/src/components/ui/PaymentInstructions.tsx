@@ -33,9 +33,9 @@ export default function PaymentInstructions({ title, paymentMethods }: PaymentIn
   return (
     <div className="bg-white rounded-xl shadow-md border border-gray-100 overflow-hidden">
       {/* Header */}
-      <div className="p-5 border-b bg-gradient-to-r from-indigo-50 to-purple-50">
-        <h2 className="text-lg font-bold text-indigo-600 flex items-center">
-          <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2 text-indigo-500" viewBox="0 0 20 20" fill="currentColor">
+      <div className="p-5 border-b bg-gradient-to-r from-[#EB1F26]/10 to-[#f04e53]/10">
+        <h2 className="text-lg font-bold text-[#EB1F26] flex items-center">
+          <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2 text-[#EB1F26]" viewBox="0 0 20 20" fill="currentColor">
             <path d="M4 4a2 2 0 00-2 2v1h16V6a2 2 0 00-2-2H4z" />
             <path fillRule="evenodd" d="M18 9H2v5a2 2 0 002 2h12a2 2 0 002-2V9zM4 13a1 1 0 011-1h1a1 1 0 110 2H5a1 1 0 01-1-1zm5-1a1 1 0 100 2h1a1 1 0 100-2H9z" clipRule="evenodd" />
           </svg>
@@ -52,8 +52,8 @@ export default function PaymentInstructions({ title, paymentMethods }: PaymentIn
         key={method.id}
         className={`flex items-center p-3 border rounded-lg cursor-pointer transition-all duration-200 min-w-[180px] flex-shrink-0 ${
           activeMethod === method.id
-            ? 'border-indigo-500 bg-indigo-50 ring-1 ring-indigo-200'
-            : 'border-gray-200 hover:border-indigo-300 hover:bg-gray-50'
+            ? 'border-[#EB1F26] bg-[#EB1F26]/5 ring-1 ring-[#EB1F26]/20'
+            : 'border-gray-200 hover:border-[#EB1F26]/30 hover:bg-gray-50'
         }`}
         onClick={() => handleMethodClick(method.id)}
       >
@@ -83,7 +83,7 @@ export default function PaymentInstructions({ title, paymentMethods }: PaymentIn
           <div className="flex justify-center mt-6">
             <button
               onClick={handleWatchVideo}
-              className="flex items-center text-indigo-600 hover:text-indigo-800 font-medium transition"
+              className="flex items-center text-[#EB1F26] hover:text-[#9e1418] font-medium transition"
             >
               <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-1" viewBox="0 0 20 20" fill="currentColor">
                 <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clipRule="evenodd" />
@@ -109,7 +109,7 @@ export default function PaymentInstructions({ title, paymentMethods }: PaymentIn
 
       {/* Toast */}
       {showLoginPrompt && (
-        <div className="fixed bottom-5 right-5 bg-indigo-600 text-white px-5 py-3 rounded-lg shadow-lg z-50 flex items-center gap-2 animate-fade-in">
+        <div className="fixed bottom-5 right-5 bg-[#EB1F26] text-white px-5 py-3 rounded-lg shadow-lg z-50 flex items-center gap-2 animate-fade-in">
           <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
             <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd" />
           </svg>

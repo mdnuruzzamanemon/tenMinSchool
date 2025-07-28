@@ -51,14 +51,14 @@ export default function TestimonialCard({
   const shouldShowTestimonialText = !isVideoTestimonial && testimonial !== description;
 
   return (
-    <div className="testimonial-card bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100 hover:border-indigo-200 h-full flex flex-col relative group hover:-translate-y-3 transform">
+    <div className="testimonial-card bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100 hover:border-[#EB1F26]/20 h-full flex flex-col relative group hover:-translate-y-3 transform">
       {/* Decorative Elements - Show for both video and text testimonials */}
-      <div className="decorative-float absolute top-6 right-6 w-16 h-16 bg-gradient-to-br from-indigo-100 to-purple-100 rounded-full opacity-20 group-hover:opacity-40 transition-opacity duration-300 z-0"></div>
-      <div className="absolute bottom-6 left-6 w-8 h-8 bg-gradient-to-br from-purple-100 to-pink-100 rounded-full opacity-20 group-hover:opacity-40 transition-opacity duration-300 z-0"></div>
+      <div className="decorative-float absolute top-6 right-6 w-16 h-16 bg-gradient-to-br from-[#EB1F26]/10 to-[#f04e53]/10 rounded-full opacity-20 group-hover:opacity-40 transition-opacity duration-300 z-0"></div>
+      <div className="absolute bottom-6 left-6 w-8 h-8 bg-gradient-to-br from-[#f04e53]/10 to-[#9e1418]/10 rounded-full opacity-20 group-hover:opacity-40 transition-opacity duration-300 z-0"></div>
 
       {/* Quote Icon Badge - Only show for text testimonials */}
       {shouldShowTestimonialText && (
-        <div className="absolute -top-3 -left-3 w-12 h-12 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full flex items-center justify-center shadow-lg z-10 group-hover:scale-110 transition-transform duration-300">
+        <div className="absolute -top-3 -left-3 w-12 h-12 bg-gradient-to-r from-[#EB1F26] to-[#f04e53] rounded-full flex items-center justify-center shadow-lg z-10 group-hover:scale-110 transition-transform duration-300">
           <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
             <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h4v10h-10z"/>
           </svg>
@@ -93,12 +93,12 @@ export default function TestimonialCard({
                     unoptimized
                   />
                 ) : (
-                  <div className="w-full h-full bg-gradient-to-br from-indigo-100 to-purple-100 flex items-center justify-center rounded-t-3xl">
+                  <div className="w-full h-full bg-gradient-to-br from-[#EB1F26]/10 to-[#f04e53]/10 flex items-center justify-center rounded-t-3xl">
                     <div className="text-center">
-                      <svg className="w-16 h-16 text-indigo-400 mx-auto mb-2" fill="currentColor" viewBox="0 0 24 24">
+                      <svg className="w-16 h-16 text-[#EB1F26]/40 mx-auto mb-2" fill="currentColor" viewBox="0 0 24 24">
                         <path d="M8 5v14l11-7z"/>
                       </svg>
-                      <span className="text-indigo-600 font-medium">Video Testimonial</span>
+                      <span className="text-[#EB1F26] font-medium">Video Testimonial</span>
                     </div>
                   </div>
                 )}
@@ -109,7 +109,7 @@ export default function TestimonialCard({
                   <div className="video-play-button w-20 h-20 bg-white/95 backdrop-blur-sm rounded-full flex items-center justify-center transition-all duration-300 group-hover/video:scale-110 shadow-xl group-hover/video:bg-white border-4 border-white/50">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      className="h-10 w-10 text-indigo-600 ml-1"
+                      className="h-10 w-10 text-[#EB1F26] ml-1"
                       viewBox="0 0 20 20"
                       fill="currentColor"
                     >
@@ -138,23 +138,23 @@ export default function TestimonialCard({
                 alt={name}
                 width={isVideoTestimonial ? 48 : 60}
                 height={isVideoTestimonial ? 48 : 60}
-                className={`rounded-full object-cover ring-3 ring-indigo-100 group-hover/profile:ring-indigo-300 transition-all duration-300 ${
+                className={`rounded-full object-cover ring-3 ring-[#EB1F26]/10 group-hover/profile:ring-[#EB1F26]/30 transition-all duration-300 ${
                   isVideoTestimonial ? 'w-12 h-12' : 'w-15 h-15'
                 }`}
                 onError={handleImageError}
                 unoptimized
               />
-              <div className="absolute -bottom-1 -right-1 w-5 h-5 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full border-3 border-white shadow-lg"></div>
+              <div className="absolute -bottom-1 -right-1 w-5 h-5 bg-gradient-to-r from-[#EB1F26] to-[#f04e53] rounded-full border-3 border-white shadow-lg"></div>
             </div>
           ) : (
-            <div className={`bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full flex items-center justify-center ring-3 ring-indigo-100 ${
+            <div className={`bg-gradient-to-r from-[#EB1F26] to-[#f04e53] rounded-full flex items-center justify-center ring-3 ring-[#EB1F26]/10 ${
               isVideoTestimonial ? 'w-12 h-12' : 'w-15 h-15'
             }`}>
               <span className="text-white font-bold text-lg">{name.charAt(0)}</span>
             </div>
           )}
           <div className="ml-4 flex-1">
-            <h3 className={`font-bold bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-purple-600 ${
+            <h3 className={`font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#EB1F26] to-[#f04e53] ${
               isVideoTestimonial ? 'text-base' : 'text-lg'
             }`}>
               {name}
@@ -168,7 +168,7 @@ export default function TestimonialCard({
           <div className="flex-grow flex flex-col relative overflow-visible">
             <blockquote className="testimonial-quote relative mb-4 px-6 overflow-visible">
               {/* Large Opening Quote */}
-              <span className="absolute -top-4 -left-2 text-6xl font-serif text-indigo-200 leading-none select-none pointer-events-none opacity-60 z-0 overflow-visible">&ldquo;</span>
+              <span className="absolute -top-4 -left-2 text-6xl font-serif text-[#EB1F26]/20 leading-none select-none pointer-events-none opacity-60 z-0 overflow-visible">&ldquo;</span>
               
               <div className={`text-gray-700 leading-relaxed relative z-10 ${
                 !isExpanded && hasLongText ? 'line-clamp-4' : ''
@@ -177,14 +177,14 @@ export default function TestimonialCard({
               </div>
               
               {/* Large Closing Quote */}
-              <span className="absolute -bottom-6 right-0 text-6xl font-serif text-indigo-200 leading-none select-none pointer-events-none opacity-60 z-0 overflow-visible">&rdquo;</span>
+              <span className="absolute -bottom-6 right-0 text-6xl font-serif text-[#EB1F26]/20 leading-none select-none pointer-events-none opacity-60 z-0 overflow-visible">&rdquo;</span>
             </blockquote>
             
             {/* Read More Button */}
             {hasLongText && (
               <button 
                 onClick={toggleReadMore}
-                className="text-indigo-600 hover:text-indigo-800 text-sm font-semibold mt-auto flex items-center transition-all duration-300 self-start group/btn"
+                className="text-[#EB1F26] hover:text-[#9e1418] text-sm font-semibold mt-auto flex items-center transition-all duration-300 self-start group/btn"
               >
                 {isExpanded ? 'Show Less' : 'Read More'}
                 <svg 

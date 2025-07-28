@@ -39,7 +39,7 @@ export default function FAQ({ product }: FAQProps) {
       <div className="container mx-auto px-4 md:px-6">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-10">
-            <h2 className="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-purple-600 mb-4">
+            <h2 className="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#EB1F26] to-[#f04e53] mb-4">
               {faqSection?.name || "সচরাচর জিজ্ঞাসা"}
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
@@ -51,7 +51,7 @@ export default function FAQ({ product }: FAQProps) {
             <input
               type="text"
               placeholder="প্রশ্ন খুঁজুন..."
-              className="w-full px-5 py-4 pr-12 rounded-full border border-gray-200 focus:outline-none focus:ring-2 focus:ring-indigo-300 focus:border-indigo-300 transition-all duration-300 shadow-sm"
+              className="w-full px-5 py-4 pr-12 rounded-full border border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#EB1F26]/30 focus:border-[#EB1F26] transition-all duration-300 shadow-sm"
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
             />
@@ -88,7 +88,7 @@ export default function FAQ({ product }: FAQProps) {
           <div className="mt-8 text-center">
             <p className="text-gray-600">
               আরও প্রশ্ন আছে? 
-              <a href="#contact" className="text-indigo-600 font-medium ml-1 hover:text-indigo-700 transition-colors">
+              <a href="#contact" className="text-[#EB1F26] font-medium ml-1 hover:text-[#9e1418] transition-colors">
                 আমাদের সাথে যোগাযোগ করুন
               </a>
             </p>

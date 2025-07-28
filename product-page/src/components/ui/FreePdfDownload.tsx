@@ -30,7 +30,8 @@ export default function FreePdfDownload({
   };
 
   return (
-    <div className="relative overflow-hidden rounded-xl shadow-xl bg-gradient-to-r from-[#00273B] via-[#004D7A] to-[#007CA6]">
+    <div className="relative overflow-hidden rounded-xl shadow-xl bg-gradient-to-r from-black via-[#7a0f13] to-[#EB1F26]">
+
       <div className="flex flex-col md:flex-row">
         {/* Left content */}
         <div className="p-6 md:p-8 flex-grow">

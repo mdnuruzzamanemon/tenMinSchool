@@ -26,13 +26,13 @@ export default function FAQItem({ question, answer, isOpen = false, toggleFAQ, i
   return (
     <div className="border-b border-gray-100 last:border-b-0">
       <button
-        className="w-full text-left py-4 px-6 flex justify-between items-center focus:outline-none focus:ring-2 focus:ring-indigo-200 rounded-lg transition-colors duration-300"
+        className="w-full text-left py-4 px-6 flex justify-between items-center focus:outline-none focus:ring-2 focus:ring-[#EB1F26]/20 rounded-lg transition-colors duration-300"
         onClick={handleToggle}
       >
-        <h3 className={`font-medium text-lg ${isCurrentlyOpen ? 'text-indigo-600' : 'text-gray-800'}`}>
+        <h3 className={`font-medium text-lg ${isCurrentlyOpen ? 'text-[#EB1F26]' : 'text-gray-800'}`}>
           {question}
         </h3>
-        <div className={`w-6 h-6 flex items-center justify-center rounded-full transition-all duration-300 ${isCurrentlyOpen ? 'bg-indigo-500 rotate-180' : 'bg-gray-200'}`}>
+        <div className={`w-6 h-6 flex items-center justify-center rounded-full transition-all duration-300 ${isCurrentlyOpen ? 'bg-[#EB1F26] rotate-180' : 'bg-gray-200'}`}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className={`h-3 w-3 transition-transform duration-300 ${isCurrentlyOpen ? 'text-white' : 'text-gray-600'}`}

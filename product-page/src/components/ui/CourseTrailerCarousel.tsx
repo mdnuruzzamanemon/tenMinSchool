@@ -105,11 +105,11 @@ export default function CourseTrailerCarousel({ media }: CourseTrailerCarouselPr
             {activeMedia.resource_type === 'video' && (
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-black/30 flex items-center justify-center">
                 <div className="play-button-container relative">
-                  <div className="absolute inset-0 bg-indigo-500/30 rounded-full animate-ping"></div>
+                  <div className="absolute inset-0 bg-[#EB1F26]/30 rounded-full animate-ping"></div>
                   <div className="w-20 h-20 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center transition-transform duration-300 hover:scale-110 shadow-lg relative z-10">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      className="h-10 w-10 text-indigo-600"
+                      className="h-10 w-10 text-[#EB1F26]"
                       viewBox="0 0 20 20"
                       fill="currentColor"
                     >
@@ -165,7 +165,7 @@ export default function CourseTrailerCarousel({ media }: CourseTrailerCarouselPr
               <SwiperSlide key={index} className="h-full">
                 <div 
                   className={`relative h-full rounded overflow-hidden cursor-pointer border-2 transition-all ${
-                    index === activeMediaIndex ? 'border-indigo-500 shadow-md' : 'border-transparent hover:border-indigo-300'
+                    index === activeMediaIndex ? 'border-[#EB1F26] shadow-md' : 'border-transparent hover:border-[#f04e53]'
                   }`}
                   onClick={() => handleThumbnailClick(index)}
                 >
@@ -203,7 +203,7 @@ export default function CourseTrailerCarousel({ media }: CourseTrailerCarouselPr
           
           {/* Custom Navigation Buttons */}
           <button 
-            className="swiper-button-prev-custom absolute top-1/2 -translate-y-1/2 z-10 w-8 h-8 flex items-center justify-center bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full shadow-md cursor-pointer left-1 hover:scale-110 transition-transform"
+            className="swiper-button-prev-custom absolute top-1/2 -translate-y-1/2 z-10 w-8 h-8 flex items-center justify-center bg-gradient-to-r from-[#EB1F26] to-[#f04e53] rounded-full shadow-md cursor-pointer left-1 hover:scale-110 transition-transform"
             onClick={handlePrevClick}
           >
             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -211,7 +211,7 @@ export default function CourseTrailerCarousel({ media }: CourseTrailerCarouselPr
             </svg>
           </button>
           <button 
-            className="swiper-button-next-custom absolute top-1/2 -translate-y-1/2 z-10 w-8 h-8 flex items-center justify-center bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full shadow-md cursor-pointer right-1 hover:scale-110 transition-transform"
+            className="swiper-button-next-custom absolute top-1/2 -translate-y-1/2 z-10 w-8 h-8 flex items-center justify-center bg-gradient-to-r from-[#EB1F26] to-[#f04e53] rounded-full shadow-md cursor-pointer right-1 hover:scale-110 transition-transform"
             onClick={handleNextClick}
           >
             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">

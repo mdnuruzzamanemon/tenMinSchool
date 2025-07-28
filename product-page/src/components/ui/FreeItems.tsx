@@ -158,7 +158,7 @@ export default function FreeItems({ title, items }: FreeItemsProps) {
 
       {/* Toast Message */}
       {showLoginPrompt && (
-        <div className="fixed bottom-4 right-4 bg-indigo-600 text-white px-4 py-3 rounded-lg shadow-lg z-50 animate-fade-in flex items-center">
+        <div className="fixed bottom-4 right-4 bg-[#EB1F26] text-white px-4 py-3 rounded-lg shadow-lg z-50 animate-fade-in flex items-center">
           <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
             <path
               fillRule="evenodd"

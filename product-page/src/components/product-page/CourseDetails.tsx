@@ -251,7 +251,7 @@ export default function CourseDetails({ product }: CourseDetailsProps) {
           {instructorsSection && instructors.length > 0 && (
             <section id="instructors" className="mb-12 relative">
               <div className="flex items-center mb-6 sticky top-20 bg-white/80 backdrop-blur-sm z-10 py-2">
-                <div className="h-1 w-10 bg-gradient-to-r from-indigo-500 to-purple-500 rounded mr-3"></div>
+                <div className="h-1 w-10 bg-gradient-to-r from-[#EB1F26] to-[#f04e53] rounded mr-3"></div>
                 <h2 className="text-2xl font-bold">{instructorsSection.name}</h2>
               </div>
               <div className="grid grid-cols-1 gap-6">
@@ -262,7 +262,7 @@ export default function CourseDetails({ product }: CourseDetailsProps) {
                   >
                     {instructor.image && (
                       <div className="w-32 h-32 relative rounded-full overflow-hidden group">
-                        <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/30 to-purple-500/30 opacity-0 group-hover:opacity-100 transition-opacity z-10"></div>
+                        <div className="absolute inset-0 bg-gradient-to-br from-[#EB1F26]/30 to-[#f04e53]/30 opacity-0 group-hover:opacity-100 transition-opacity z-10"></div>
                         <Image
                           src={instructor.image}
                           alt={instructor.name}
@@ -278,7 +278,7 @@ export default function CourseDetails({ product }: CourseDetailsProps) {
                       </div>
                     )}
                     <div className="flex-1">
-                      <h3 className="text-2xl font-semibold bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-purple-600">
+                      <h3 className="text-2xl font-semibold bg-clip-text text-transparent bg-gradient-to-r from-[#EB1F26] to-[#f04e53]">
                         {instructor.name}
                       </h3>
                       <div 
@@ -296,7 +296,7 @@ export default function CourseDetails({ product }: CourseDetailsProps) {
           {featuresSection && features.length > 0 && (
             <section id="features" className="mb-12 relative">
               <div className="flex items-center mb-6 sticky top-20 bg-white/80 backdrop-blur-sm z-10 py-2">
-                <div className="h-1 w-10 bg-gradient-to-r from-indigo-500 to-purple-500 rounded mr-3"></div>
+                <div className="h-1 w-10 bg-gradient-to-r from-[#EB1F26] to-[#f04e53] rounded mr-3"></div>
                 <h2 className="text-2xl font-bold">{featuresSection.name}</h2>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -304,13 +304,13 @@ export default function CourseDetails({ product }: CourseDetailsProps) {
                   <div 
                     key={feature.id} 
                     className={`flex gap-4 p-4 bg-gradient-to-r from-gray-50 to-white rounded-lg shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100 cursor-pointer ${
-                      activeFeature === feature.id ? 'border-indigo-300 shadow-md' : ''
+                      activeFeature === feature.id ? 'border-[#EB1F26] shadow-md' : ''
                     }`}
                     onClick={() => setActiveFeature(activeFeature === feature.id ? null : feature.id)}
                   >
                     {feature.icon && (
                       <div className="w-12 h-12 flex-shrink-0 relative group">
-                        <div className={`absolute inset-0 rounded-full bg-gradient-to-br from-indigo-500/20 to-purple-500/20 transform scale-0 group-hover:scale-150 transition-transform duration-500 ${activeFeature === feature.id ? 'scale-150' : ''}`}></div>
+                        <div className={`absolute inset-0 rounded-full bg-gradient-to-br from-[#EB1F26]/20 to-[#f04e53]/20 transform scale-0 group-hover:scale-150 transition-transform duration-500 ${activeFeature === feature.id ? 'scale-150' : ''}`}></div>
                         <Image
                           src={feature.icon}
                           alt=""
@@ -339,7 +339,7 @@ export default function CourseDetails({ product }: CourseDetailsProps) {
           {pdfDownloadData && (
             <section id="pdf-download" className="mb-12 relative">
               <div className="flex items-center mb-6 sticky top-20 bg-white/80 backdrop-blur-sm z-10 py-2">
-                <div className="h-1 w-10 bg-gradient-to-r from-indigo-500 to-purple-500 rounded mr-3"></div>
+                <div className="h-1 w-10 bg-gradient-to-r from-[#EB1F26] to-[#f04e53] rounded mr-3"></div>
                 <h2 className="text-2xl font-bold">ফ্রি PDF Download করুন</h2>
               </div>
               <FreePdfDownload
@@ -357,7 +357,7 @@ export default function CourseDetails({ product }: CourseDetailsProps) {
           {pointersSection && pointers.length > 0 && (
             <section id="pointers" className="mb-12 relative">
               <div className="flex items-center mb-6 sticky top-20 bg-white/80 backdrop-blur-sm z-10 py-2">
-                <div className="h-1 w-10 bg-gradient-to-r from-indigo-500 to-purple-500 rounded mr-3"></div>
+                <div className="h-1 w-10 bg-gradient-to-r from-[#EB1F26] to-[#f04e53] rounded mr-3"></div>
                 <h2 className="text-2xl font-bold">{pointersSection.name}</h2>
               </div>
               <div className="bg-gradient-to-r from-gray-50 to-white rounded-lg p-6 shadow-sm border border-gray-100">
@@ -367,7 +367,7 @@ export default function CourseDetails({ product }: CourseDetailsProps) {
                       key={pointer.id} 
                       className="flex items-start gap-3 hover:bg-white/80 p-2 rounded-lg transition-colors"
                     >
-                      <div className="w-6 h-6 rounded-full bg-gradient-to-r from-indigo-500 to-purple-500 flex-shrink-0 flex items-center justify-center mt-0.5">
+                      <div className="w-6 h-6 rounded-full bg-gradient-to-r from-[#EB1F26] to-[#f04e53] flex-shrink-0 flex items-center justify-center mt-0.5">
                         <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
                         </svg>
@@ -384,7 +384,7 @@ export default function CourseDetails({ product }: CourseDetailsProps) {
           {featureExplanationsSection && exclusiveFeatures.length > 0 && (
             <section id="exclusive-features" className="mb-12 relative">
               <div className="flex items-center mb-6 sticky top-20 bg-white/80 backdrop-blur-sm z-10 py-2">
-                <div className="h-1 w-10 bg-gradient-to-r from-indigo-500 to-purple-500 rounded mr-3"></div>
+                <div className="h-1 w-10 bg-gradient-to-r from-[#EB1F26] to-[#f04e53] rounded mr-3"></div>
                 <h2 className="text-2xl font-bold">{featureExplanationsSection.name}</h2>
               </div>
               <CourseExclusiveFeatures
@@ -398,7 +398,7 @@ export default function CourseDetails({ product }: CourseDetailsProps) {
           {contentPreviewSection && (
             <section id="content-preview" className="mb-12 relative">
               <div className="flex items-center mb-6 sticky top-20 bg-white/80 backdrop-blur-sm z-10 py-2">
-                <div className="h-1 w-10 bg-gradient-to-r from-indigo-500 to-purple-500 rounded mr-3"></div>
+                <div className="h-1 w-10 bg-gradient-to-r from-[#EB1F26] to-[#f04e53] rounded mr-3"></div>
                 <h2 className="text-2xl font-bold">{contentPreviewSection.name || "কন্টেন্ট প্রিভিউ"}</h2>
               </div>
               <ContentPreview
@@ -412,7 +412,7 @@ export default function CourseDetails({ product }: CourseDetailsProps) {
           {aboutSection && aboutItems.length > 0 && (
             <section id="about" className="mb-12 relative">
               <div className="flex items-center mb-6 sticky top-20 bg-white/80 backdrop-blur-sm z-10 py-2">
-                <div className="h-1 w-10 bg-gradient-to-r from-indigo-500 to-purple-500 rounded mr-3"></div>
+                <div className="h-1 w-10 bg-gradient-to-r from-[#EB1F26] to-[#f04e53] rounded mr-3"></div>
                 <h2 className="text-2xl font-bold">{aboutSection.name}</h2>
               </div>
               
@@ -424,7 +424,7 @@ export default function CourseDetails({ product }: CourseDetailsProps) {
                     onClick={() => setActiveTab(item.id)}
                     className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
                       activeTab === item.id 
-                        ? 'bg-gradient-to-r from-indigo-600 to-purple-600 text-white shadow-md' 
+                        ? 'bg-gradient-to-r from-[#EB1F26] to-[#f04e53] text-white shadow-md' 
                         : 'bg-white text-gray-700 hover:bg-gray-100 border border-gray-200'
                     }`}
                   >
@@ -446,13 +446,16 @@ export default function CourseDetails({ product }: CourseDetailsProps) {
                   >
                     <div className="bg-white rounded-lg p-6 shadow-lg border border-gray-100 relative overflow-hidden">
                       {/* Decorative elements */}
-                      <div className="absolute -top-20 -right-20 w-40 h-40 bg-gradient-to-bl from-indigo-500/10 to-transparent rounded-full"></div>
-                      <div className="absolute -bottom-20 -left-20 w-40 h-40 bg-gradient-to-tr from-purple-500/10 to-transparent rounded-full"></div>
+                      <div className="absolute -top-20 -right-20 w-40 h-40 bg-gradient-to-bl from-[#EB1F26]/10 to-transparent rounded-full"></div>
+                      <div className="absolute -bottom-20 -left-20 w-40 h-40 bg-gradient-to-tr from-[#f04e53]/10 to-transparent rounded-full"></div>
                       
                       {/* Icon if available */}
                       {item.icon && (
-                        <div className="w-16 h-16 mb-4 relative">
-                          <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/20 to-purple-500/20 rounded-full transform scale-150"></div>
+                        <div className="w-16 h-0 mb-4 relative">
+                          {/* Decorative background that doesn't affect layout */}
+                          <div className="absolute inset-0 w-0 h-0 overflow-visible">
+                            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-24 h-24 bg-gradient-to-br from-[#EB1F26]/20 to-[#f04e53]/20 rounded-full"></div>
+                          </div>
                           <Image
                             src={item.icon}
                             alt=""
@@ -469,7 +472,7 @@ export default function CourseDetails({ product }: CourseDetailsProps) {
                       )}
                       
                       <h3 
-                        className="text-xl font-semibold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-purple-600 relative"
+                        className="text-xl font-semibold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-[#EB1F26] to-[#f04e53] relative"
                         dangerouslySetInnerHTML={{ __html: item.title }}
                       />
                       
@@ -488,7 +491,7 @@ export default function CourseDetails({ product }: CourseDetailsProps) {
           {freeItemsSection && (
             <section id="free-items" className="mb-12 relative">
               <div className="flex items-center mb-6 sticky top-20 bg-white/80 backdrop-blur-sm z-10 py-2">
-                <div className="h-1 w-10 bg-gradient-to-r from-indigo-500 to-purple-500 rounded mr-3"></div>
+                <div className="h-1 w-10 bg-gradient-to-r from-[#EB1F26] to-[#f04e53] rounded mr-3"></div>
                 <h2 className="text-2xl font-bold">{freeItemsSection.name || "এই কোর্সের সাথে ফ্রি পাচ্ছেন–"}</h2>
               </div>
               <FreeItems
@@ -502,7 +505,7 @@ export default function CourseDetails({ product }: CourseDetailsProps) {
           {requirementsSection && (
             <section id="requirements" className="mb-12 relative">
               <div className="flex items-center mb-6 sticky top-20 bg-white/80 backdrop-blur-sm z-10 py-2">
-                <div className="h-1 w-10 bg-gradient-to-r from-indigo-500 to-purple-500 rounded mr-3"></div>
+                <div className="h-1 w-10 bg-gradient-to-r from-[#EB1F26] to-[#f04e53] rounded mr-3"></div>
                 <h2 className="text-2xl font-bold">{requirementsSection.name || "ক্লাস করার জন্য প্রয়োজন হবে"}</h2>
               </div>
               <Requirements
@@ -516,7 +519,7 @@ export default function CourseDetails({ product }: CourseDetailsProps) {
           {paymentSection && (
             <section id="payment" className="mb-12 relative">
               <div className="flex items-center mb-6 sticky top-20 bg-white/80 backdrop-blur-sm z-10 py-2">
-                <div className="h-1 w-10 bg-gradient-to-r from-indigo-500 to-purple-500 rounded mr-3"></div>
+                <div className="h-1 w-10 bg-gradient-to-r from-[#EB1F26] to-[#f04e53] rounded mr-3"></div>
                 <h2 className="text-2xl font-bold">{paymentSection.name || "যেভাবে পেমেন্ট করবেন"}</h2>
               </div>
               <PaymentInstructions
@@ -536,17 +539,17 @@ export default function CourseDetails({ product }: CourseDetailsProps) {
               <CourseTrailerCarousel media={courseMedia} />
               
               {/* Price and CTA Button */}
-              <div className="p-6 bg-gradient-to-r from-indigo-50 to-purple-50 relative overflow-hidden">
+              <div className="p-6 bg-gradient-to-r from-[#EB1F26]/10 to-[#f04e53]/10 relative overflow-hidden">
                 {/* Decorative elements */}
-                <div className="absolute -top-12 -right-12 w-24 h-24 bg-gradient-to-br from-indigo-500/10 to-purple-500/10 rounded-full blur-xl"></div>
-                <div className="absolute -bottom-12 -left-12 w-24 h-24 bg-gradient-to-br from-purple-500/10 to-pink-500/10 rounded-full blur-xl"></div>
+                <div className="absolute -top-12 -right-12 w-24 h-24 bg-gradient-to-br from-[#EB1F26]/10 to-[#f04e53]/10 rounded-full blur-xl"></div>
+                <div className="absolute -bottom-12 -left-12 w-24 h-24 bg-gradient-to-br from-[#f04e53]/10 to-[#EB1F26]/10 rounded-full blur-xl"></div>
                 
                 <div className="flex justify-between items-center mb-4 relative">
                   <div className="text-gray-500 line-through text-lg">৳1500</div>
-                  <div className="text-indigo-600 font-bold text-2xl">৳1000</div>
+                  <div className="text-[#EB1F26] font-bold text-2xl">৳1000</div>
                 </div>
                 
-                <button className="btn-gradient-primary w-full py-3 rounded-full text-lg font-medium shadow-md hover:shadow-lg transform hover:-translate-y-0.5 transition-transform relative overflow-hidden group">
+                <button className="bg-gradient-to-r from-[#EB1F26] to-[#f04e53] w-full py-3 rounded-full text-lg font-medium text-white shadow-md hover:shadow-lg transform hover:-translate-y-0.5 transition-transform relative overflow-hidden group">
                   <span className="relative z-10">{product.cta_text.name}</span>
                   <span className="absolute inset-0 bg-white/20 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
                 </button>
@@ -555,9 +558,9 @@ export default function CourseDetails({ product }: CourseDetailsProps) {
               {/* Checklist */}
               <div className="p-6 border-t border-gray-100 relative overflow-hidden">
                 {/* Decorative background */}
-                <div className="absolute top-0 right-0 w-40 h-40 bg-gradient-to-bl from-indigo-500/5 to-transparent rounded-full"></div>
+                <div className="absolute top-0 right-0 w-40 h-40 bg-gradient-to-bl from-[#EB1F26]/5 to-transparent rounded-full"></div>
                 
-                <h3 className="font-semibold text-lg mb-4 bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-purple-600 relative">
+                <h3 className="font-semibold text-lg mb-4 bg-clip-text text-transparent bg-gradient-to-r from-[#EB1F26] to-[#f04e53] relative">
                   এই কোর্সে যা থাকছে
                 </h3>
                 <ul className="space-y-4 relative">
@@ -582,7 +585,7 @@ export default function CourseDetails({ product }: CourseDetailsProps) {
                           />
                         </div>
                       ) : (
-                        <div className="w-6 h-6 rounded-full bg-gradient-to-r from-indigo-500 to-purple-500 flex-shrink-0 flex items-center justify-center group-hover:scale-110 transition-transform">
+                        <div className="w-6 h-6 rounded-full bg-gradient-to-r from-[#EB1F26] to-[#f04e53] flex-shrink-0 flex items-center justify-center group-hover:scale-110 transition-transform">
                           <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
                           </svg>

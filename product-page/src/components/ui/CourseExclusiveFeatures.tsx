@@ -32,9 +32,9 @@ export default function CourseExclusiveFeatures({ title, features }: CourseExclu
     <div className="bg-white rounded-lg shadow-md border border-gray-100 overflow-hidden">
       <div className="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-gray-100">
         {/* Left sidebar - Features list */}
-        <div className="md:col-span-1 bg-gradient-to-br from-indigo-50 to-purple-50">
+        <div className="md:col-span-1 bg-gradient-to-br from-[#EB1F26]/10 to-[#f04e53]/10">
           <div className="p-4 border-b border-gray-100">
-            <h3 className="font-semibold text-lg bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-purple-600">
+            <h3 className="font-semibold text-lg bg-clip-text text-transparent bg-gradient-to-r from-[#EB1F26] to-[#f04e53]">
               {title}
             </h3>
           </div>
@@ -44,12 +44,12 @@ export default function CourseExclusiveFeatures({ title, features }: CourseExclu
                 key={feature.id}
                 className={`p-4 cursor-pointer transition-all duration-300 ${
                   activeFeature === feature.id 
-                    ? 'bg-white shadow-sm border-l-4 border-l-indigo-500' 
+                    ? 'bg-white shadow-sm border-l-4 border-l-[#EB1F26]' 
                     : 'hover:bg-white/50'
                 }`}
                 onClick={() => handleFeatureClick(feature.id)}
               >
-                <h4 className={`font-medium ${activeFeature === feature.id ? 'text-indigo-600' : 'text-gray-800'}`}>
+                <h4 className={`font-medium ${activeFeature === feature.id ? 'text-[#EB1F26]' : 'text-gray-800'}`}>
                   {feature.title}
                 </h4>
               </div>
@@ -82,11 +82,11 @@ export default function CourseExclusiveFeatures({ title, features }: CourseExclu
 
                 {/* Feature checklist */}
                 <div className="w-full md:w-2/3">
-                  <h3 className="text-xl font-semibold mb-4 text-indigo-600">{currentFeature.title}</h3>
+                  <h3 className="text-xl font-semibold mb-4 text-[#EB1F26]">{currentFeature.title}</h3>
                   <ul className="space-y-3">
                     {currentFeature.checklist.map((item, index) => (
                       <li key={index} className="flex items-start gap-3 group">
-                        <div className="w-6 h-6 rounded-full bg-gradient-to-r from-indigo-500 to-purple-500 flex-shrink-0 flex items-center justify-center mt-0.5 group-hover:scale-110 transition-transform">
+                        <div className="w-6 h-6 rounded-full bg-gradient-to-r from-[#EB1F26] to-[#f04e53] flex-shrink-0 flex items-center justify-center mt-0.5 group-hover:scale-110 transition-transform">
                           <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
                           </svg>
@@ -100,7 +100,7 @@ export default function CourseExclusiveFeatures({ title, features }: CourseExclu
               
               {/* Interactive elements */}
               <div className="flex justify-center">
-                <button className="btn-gradient-primary px-6 py-2 rounded-full text-white font-medium shadow-md hover:shadow-lg transform hover:-translate-y-0.5 transition-transform">
+                <button className="bg-gradient-to-r from-[#EB1F26] to-[#f04e53] px-6 py-2 rounded-full text-white font-medium shadow-md hover:shadow-lg transform hover:-translate-y-0.5 transition-transform">
                   কোর্সটি কিনুন
                 </button>
               </div>
@@ -114,8 +114,8 @@ export default function CourseExclusiveFeatures({ title, features }: CourseExclu
       </div>
       
       {/* Decorative elements */}
-      <div className="absolute top-6 right-6 w-20 h-20 bg-gradient-to-bl from-indigo-500/5 to-transparent rounded-full"></div>
-      <div className="absolute bottom-6 left-6 w-16 h-16 bg-gradient-to-tr from-purple-500/5 to-transparent rounded-full"></div>
+      <div className="absolute top-6 right-6 w-20 h-20 bg-gradient-to-bl from-[#EB1F26]/5 to-transparent rounded-full"></div>
+      <div className="absolute bottom-6 left-6 w-16 h-16 bg-gradient-to-tr from-[#f04e53]/5 to-transparent rounded-full"></div>
     </div>
   );
 } 

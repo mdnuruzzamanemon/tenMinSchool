@@ -30,8 +30,8 @@ export default function ContentPreview({ title, items }: ContentPreviewProps) {
 
   return (
     <div className="bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden">
-      <div className="p-4 border-b border-gray-100 bg-gradient-to-r from-indigo-50 to-purple-50">
-        <h2 className="text-lg font-bold bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-purple-600">
+      <div className="p-4 border-b border-gray-100 bg-gradient-to-r from-[#EB1F26]/10 to-[#f04e53]/10">
+        <h2 className="text-lg font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#EB1F26] to-[#f04e53]">
           {title}
         </h2>
       </div>
@@ -45,8 +45,8 @@ export default function ContentPreview({ title, items }: ContentPreviewProps) {
           >
             <div className="flex-shrink-0 mr-3">
               {item.type === 'video' ? (
-                <div className="w-8 h-8 bg-indigo-100 rounded-full flex items-center justify-center">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 text-indigo-600" viewBox="0 0 20 20" fill="currentColor">
+                <div className="w-8 h-8 bg-[#EB1F26]/10 rounded-full flex items-center justify-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 text-[#EB1F26]" viewBox="0 0 20 20" fill="currentColor">
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clipRule="evenodd" />
                   </svg>
                 </div>
@@ -75,7 +75,7 @@ export default function ContentPreview({ title, items }: ContentPreviewProps) {
 
       {/* Login Prompt Toast */}
       {showLoginPrompt && (
-        <div className="fixed bottom-4 right-4 bg-indigo-600 text-white px-4 py-3 rounded-lg shadow-lg z-50 animate-fade-in flex items-center">
+        <div className="fixed bottom-4 right-4 bg-[#EB1F26] text-white px-4 py-3 rounded-lg shadow-lg z-50 animate-fade-in flex items-center">
           <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
             <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd" />
           </svg>

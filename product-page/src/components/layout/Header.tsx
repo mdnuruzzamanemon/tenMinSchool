@@ -50,7 +50,7 @@ export default function Header() {
           style={{
             backgroundImage: `
               url(/header-bg-pattern.svg),
-              linear-gradient(120deg, rgba(79, 70, 229, 0.08) 0%, rgba(124, 58, 237, 0.08) 50%, rgba(236, 72, 153, 0.08) 100%)
+              linear-gradient(120deg, rgba(235, 31, 38, 0.08) 0%, rgba(240, 78, 83, 0.08) 50%, rgba(158, 20, 24, 0.08) 100%)
             `,
             backgroundPosition: `${backgroundPositionX} ${backgroundPositionY}`,
             backgroundSize: '120% 120%',
@@ -58,9 +58,9 @@ export default function Header() {
           }}
         >
           {/* Animated particles */}
-          <div className="absolute top-1/4 left-1/4 w-12 h-12 rounded-full bg-indigo-500/10 animate-ping" style={{ animationDuration: '3s' }}></div>
-          <div className="absolute top-3/4 left-1/3 w-8 h-8 rounded-full bg-purple-500/10 animate-ping" style={{ animationDuration: '4s' }}></div>
-          <div className="absolute top-1/3 right-1/4 w-10 h-10 rounded-full bg-pink-500/10 animate-ping" style={{ animationDuration: '5s' }}></div>
+          <div className="absolute top-1/4 left-1/4 w-12 h-12 rounded-full bg-[#EB1F26]/10 animate-ping" style={{ animationDuration: '3s' }}></div>
+          <div className="absolute top-3/4 left-1/3 w-8 h-8 rounded-full bg-[#f04e53]/10 animate-ping" style={{ animationDuration: '4s' }}></div>
+          <div className="absolute top-1/3 right-1/4 w-10 h-10 rounded-full bg-[#9e1418]/10 animate-ping" style={{ animationDuration: '5s' }}></div>
         </div>
       )}
 
@@ -76,7 +76,7 @@ export default function Header() {
               onError={() => setLogoError(true)}
             />
           ) : (
-            <span className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-purple-600">
+            <span className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#EB1F26] to-[#f04e53]">
               10 Minute School
             </span>
           )}
@@ -84,30 +84,30 @@ export default function Header() {
         
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-6">
-          <Link href="#" className="text-gray-700 hover:text-indigo-600 transition-colors relative group">
+          <Link href="#" className="text-gray-700 hover:text-[#EB1F26] transition-colors relative group">
             Classes 6-12
-            <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-indigo-500 to-purple-500 transition-all duration-300 group-hover:w-full"></span>
+            <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-[#EB1F26] to-[#f04e53] transition-all duration-300 group-hover:w-full"></span>
           </Link>
-          <Link href="#" className="text-gray-700 hover:text-indigo-600 transition-colors relative group">
+          <Link href="#" className="text-gray-700 hover:text-[#EB1F26] transition-colors relative group">
             Skills
-            <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-indigo-500 to-purple-500 transition-all duration-300 group-hover:w-full"></span>
+            <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-[#EB1F26] to-[#f04e53] transition-all duration-300 group-hover:w-full"></span>
           </Link>
-          <Link href="#" className="text-gray-700 hover:text-indigo-600 transition-colors relative group">
+          <Link href="#" className="text-gray-700 hover:text-[#EB1F26] transition-colors relative group">
             Admission
-            <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-indigo-500 to-purple-500 transition-all duration-300 group-hover:w-full"></span>
+            <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-[#EB1F26] to-[#f04e53] transition-all duration-300 group-hover:w-full"></span>
           </Link>
-          <Link href="#" className="text-gray-700 hover:text-indigo-600 transition-colors relative group">
+          <Link href="#" className="text-gray-700 hover:text-[#EB1F26] transition-colors relative group">
             Online Batch
-            <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-indigo-500 to-purple-500 transition-all duration-300 group-hover:w-full"></span>
+            <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-[#EB1F26] to-[#f04e53] transition-all duration-300 group-hover:w-full"></span>
           </Link>
-          <Link href="#" className="text-gray-700 hover:text-indigo-600 transition-colors relative group">
+          <Link href="#" className="text-gray-700 hover:text-[#EB1F26] transition-colors relative group">
             English Center
-            <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-indigo-500 to-purple-500 transition-all duration-300 group-hover:w-full"></span>
+            <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-[#EB1F26] to-[#f04e53] transition-all duration-300 group-hover:w-full"></span>
           </Link>
         </nav>
         
         <div className="flex items-center space-x-4">
-          <button className="btn-gradient-primary px-4 py-2 rounded-full shadow-sm hover:shadow-md">
+          <button className="bg-gradient-to-r from-[#EB1F26] to-[#f04e53] text-white px-4 py-2 rounded-full shadow-sm hover:shadow-md">
             Login
           </button>
           <button 
@@ -136,35 +136,35 @@ export default function Header() {
             <nav className="flex flex-col space-y-6">
               <Link 
                 href="#" 
-                className="text-xl font-medium text-gray-800 hover:text-indigo-600 transition-colors"
+                className="text-xl font-medium text-gray-800 hover:text-[#EB1F26] transition-colors"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Classes 6-12
               </Link>
               <Link 
                 href="#" 
-                className="text-xl font-medium text-gray-800 hover:text-indigo-600 transition-colors"
+                className="text-xl font-medium text-gray-800 hover:text-[#EB1F26] transition-colors"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Skills
               </Link>
               <Link 
                 href="#" 
-                className="text-xl font-medium text-gray-800 hover:text-indigo-600 transition-colors"
+                className="text-xl font-medium text-gray-800 hover:text-[#EB1F26] transition-colors"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Admission
               </Link>
               <Link 
                 href="#" 
-                className="text-xl font-medium text-gray-800 hover:text-indigo-600 transition-colors"
+                className="text-xl font-medium text-gray-800 hover:text-[#EB1F26] transition-colors"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Online Batch
               </Link>
               <Link 
                 href="#" 
-                className="text-xl font-medium text-gray-800 hover:text-indigo-600 transition-colors"
+                className="text-xl font-medium text-gray-800 hover:text-[#EB1F26] transition-colors"
                 onClick={() => setIsMenuOpen(false)}
               >
                 English Center

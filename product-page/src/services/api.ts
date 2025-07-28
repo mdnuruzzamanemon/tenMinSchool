@@ -55,23 +55,25 @@ export interface Section {
   values: unknown[];
 }
 
-export async function getProductData(slug: string): Promise<ProductResponse> {
+export async function getProductData(slug: string, lang: 'en' | 'bn' = 'en'): Promise<ProductResponse> {
   try {
-    // For production, use the actual API
-    const response = await fetch(`https://api.10minuteschool.com/discovery-service/api/v1/products/${slug}`, {
-      next: { revalidate: 3600 } // Revalidate every hour (ISR)
+    const url = `https://api.10minuteschool.com/discovery-service/api/v1/products/${slug}?lang=${lang}`;
+
+    const response = await fetch(url, {
+      next: { revalidate: 3600 }, // ISR: revalidate every hour
+      headers: {
+        'X-TENMS-SOURCE-PLATFORM': 'web',
+        'Accept': 'application/json'
+      }
     });
-    
-    // For development, use the local JSON file
-    // const response = await fetch(`/ielts-course.json`);
-    
+
     if (!response.ok) {
       throw new Error(`Failed to fetch product data: ${response.status}`);
     }
-    
+
     return await response.json();
   } catch (error: unknown) {
     console.error("Error fetching product data:", error);
     throw error;
   }
-} 
+}

@@ -33,13 +33,13 @@ export default function TestimonialCarousel({ testimonials }: TestimonialCarouse
   return (
     <div className="testimonial-carousel-container relative flex items-center">
       {/* Custom Navigation Buttons - Now properly centered */}
-      <div className="testimonial-swiper-button-prev absolute left-0 top-1/2 -translate-y-1/2 z-10 w-12 h-12 flex items-center justify-center bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full shadow-lg cursor-pointer hover:scale-110 transition-all duration-300 hover:shadow-xl -ml-6">
+      <div className="testimonial-swiper-button-prev absolute left-0 top-1/2 -translate-y-1/2 z-10 w-12 h-12 flex items-center justify-center bg-gradient-to-r from-[#EB1F26] to-[#f04e53] rounded-full shadow-lg cursor-pointer hover:scale-110 transition-all duration-300 hover:shadow-xl -ml-6">
         <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
         </svg>
       </div>
       
-      <div className="testimonial-swiper-button-next absolute right-0 top-1/2 -translate-y-1/2 z-10 w-12 h-12 flex items-center justify-center bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full shadow-lg cursor-pointer hover:scale-110 transition-all duration-300 hover:shadow-xl -mr-6">
+      <div className="testimonial-swiper-button-next absolute right-0 top-1/2 -translate-y-1/2 z-10 w-12 h-12 flex items-center justify-center bg-gradient-to-r from-[#EB1F26] to-[#f04e53] rounded-full shadow-lg cursor-pointer hover:scale-110 transition-all duration-300 hover:shadow-xl -mr-6">
         <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
         </svg>

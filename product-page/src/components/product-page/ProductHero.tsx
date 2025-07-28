@@ -63,7 +63,7 @@ export default function ProductHero({ product }: ProductHeroProps) {
         style={{
           backgroundImage: `
             url(/hero-bg-pattern.svg),
-            linear-gradient(120deg, rgba(79, 70, 229, 0.1) 0%, rgba(124, 58, 237, 0.1) 50%, rgba(236, 72, 153, 0.05) 100%)
+            linear-gradient(120deg, rgba(235, 31, 38, 0.1) 0%, rgba(240, 78, 83, 0.1) 50%, rgba(158, 20, 24, 0.05) 100%)
           `,
           backgroundPosition: `${backgroundPositionX} ${backgroundPositionY}`,
           backgroundSize: '120% 120%',
@@ -71,24 +71,24 @@ export default function ProductHero({ product }: ProductHeroProps) {
         }}
       >
         {/* Animated particles */}
-        <div className="absolute top-1/4 left-1/4 w-24 h-24 rounded-full bg-indigo-500/5 animate-pulse" style={{ animationDuration: '3s' }}></div>
-        <div className="absolute bottom-1/4 right-1/4 w-32 h-32 rounded-full bg-purple-500/5 animate-pulse" style={{ animationDuration: '4s' }}></div>
-        <div className="absolute top-1/2 right-1/3 w-48 h-48 rounded-full bg-pink-500/5 animate-pulse" style={{ animationDuration: '5s' }}></div>
+        <div className="absolute top-1/4 left-1/4 w-24 h-24 rounded-full bg-[#EB1F26]/5 animate-pulse" style={{ animationDuration: '3s' }}></div>
+        <div className="absolute bottom-1/4 right-1/4 w-32 h-32 rounded-full bg-[#f04e53]/5 animate-pulse" style={{ animationDuration: '4s' }}></div>
+        <div className="absolute top-1/2 right-1/3 w-48 h-48 rounded-full bg-[#9e1418]/5 animate-pulse" style={{ animationDuration: '5s' }}></div>
         
         {/* Floating shapes */}
-        <div className="absolute top-20 left-[10%] w-12 h-12 rotate-45 bg-gradient-to-br from-indigo-500/10 to-transparent rounded-lg animate-float" style={{ animationDuration: '8s' }}></div>
-        <div className="absolute top-[40%] right-[15%] w-16 h-16 bg-gradient-to-br from-purple-500/10 to-transparent rounded-full animate-float" style={{ animationDuration: '10s', animationDelay: '1s' }}></div>
-        <div className="absolute bottom-20 left-[20%] w-10 h-10 bg-gradient-to-br from-pink-500/10 to-transparent rotate-12 rounded-lg animate-float" style={{ animationDuration: '7s', animationDelay: '0.5s' }}></div>
+        <div className="absolute top-20 left-[10%] w-12 h-12 rotate-45 bg-gradient-to-br from-[#EB1F26]/10 to-transparent rounded-lg animate-float" style={{ animationDuration: '8s' }}></div>
+        <div className="absolute top-[40%] right-[15%] w-16 h-16 bg-gradient-to-br from-[#f04e53]/10 to-transparent rounded-full animate-float" style={{ animationDuration: '10s', animationDelay: '1s' }}></div>
+        <div className="absolute bottom-20 left-[20%] w-10 h-10 bg-gradient-to-br from-[#9e1418]/10 to-transparent rotate-12 rounded-lg animate-float" style={{ animationDuration: '7s', animationDelay: '0.5s' }}></div>
       </div>
       
       <div className="container mx-auto px-4 md:px-6 relative">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           <div className="order-2 lg:order-1" style={{ transform: `translateY(${parallaxOffset * 0.2}px)` }}>
-            <div className="inline-block px-4 py-1 mb-4 rounded-full bg-gradient-to-r from-indigo-100 to-purple-100 text-indigo-800 text-sm font-medium animate-fade-in backdrop-blur-sm">
+            <div className="inline-block px-4 py-1 mb-4 rounded-full bg-gradient-to-r from-[#EB1F26]/10 to-[#f04e53]/10 text-[#EB1F26] text-sm font-medium animate-fade-in backdrop-blur-sm">
               Featured Course
             </div>
             <h1 
-              className="text-3xl md:text-4xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-purple-600" 
+              className="text-3xl md:text-4xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-[#EB1F26] to-[#f04e53]" 
               dangerouslySetInnerHTML={{ __html: product.title }} 
             />
             <div 
@@ -124,7 +124,7 @@ export default function ProductHero({ product }: ProductHeroProps) {
               ))}
             </div>
             
-            <button className="btn-gradient-primary px-8 py-3 rounded-full text-lg font-medium shadow-md hover:shadow-lg transform hover:-translate-y-0.5 transition-transform relative overflow-hidden group">
+            <button className="bg-gradient-to-r from-[#EB1F26] to-[#f04e53] text-white px-8 py-3 rounded-full text-lg font-medium shadow-md hover:shadow-lg transform hover:-translate-y-0.5 transition-transform relative overflow-hidden group">
               <span className="relative z-10">{product.cta_text.name}</span>
               <span className="absolute inset-0 bg-white/20 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
             </button>
@@ -168,11 +168,11 @@ export default function ProductHero({ product }: ProductHeroProps) {
                 )}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent flex items-center justify-center">
                   <div className="relative">
-                    <div className="absolute inset-0 bg-indigo-500/30 rounded-full animate-ping"></div>
+                    <div className="absolute inset-0 bg-[#EB1F26]/30 rounded-full animate-ping"></div>
                     <div className="w-16 h-16 md:w-20 md:h-20 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center transition-transform duration-300 group-hover:scale-110 shadow-lg relative z-10">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
-                        className="h-8 w-8 md:h-10 md:w-10 text-indigo-600"
+                        className="h-8 w-8 md:h-10 md:w-10 text-[#EB1F26]"
                         viewBox="0 0 20 20"
                         fill="currentColor"
                       >
@@ -189,8 +189,8 @@ export default function ProductHero({ product }: ProductHeroProps) {
             )}
             
             {/* Decorative elements */}
-            <div className="absolute -top-4 -right-4 w-12 h-12 bg-gradient-to-br from-indigo-500/30 to-purple-500/30 rounded-full blur-xl"></div>
-            <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-gradient-to-br from-purple-500/30 to-pink-500/30 rounded-full blur-xl"></div>
+            <div className="absolute -top-4 -right-4 w-12 h-12 bg-gradient-to-br from-[#EB1F26]/30 to-[#f04e53]/30 rounded-full blur-xl"></div>
+            <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-gradient-to-br from-[#f04e53]/30 to-[#9e1418]/30 rounded-full blur-xl"></div>
           </div>
         </div>
       </div>

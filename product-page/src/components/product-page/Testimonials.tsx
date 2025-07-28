@@ -29,14 +29,14 @@ export default function Testimonials({ product }: TestimonialsProps) {
   }
   
   return (
-    <section className="py-16 bg-gradient-to-b from-white via-indigo-50 to-white">
+    <section className="py-16 bg-gradient-to-b from-white via-[#EB1F26]/5 to-white">
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex items-center justify-center mb-12">
-          <div className="h-1 w-10 bg-gradient-to-r from-indigo-500 to-purple-500 rounded mr-3"></div>
-          <h2 className="text-3xl pt-2 font-bold bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-purple-600">
+          <div className="h-1 w-10 bg-gradient-to-r from-[#EB1F26] to-[#f04e53] rounded mr-3"></div>
+          <h2 className="text-3xl pt-2 font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#EB1F26] to-[#f04e53]">
             {testimonialsSection.name}
           </h2>
-          <div className="h-1 w-10 bg-gradient-to-r from-purple-500 to-indigo-500 rounded ml-3"></div>
+          <div className="h-1 w-10 bg-gradient-to-r from-[#f04e53] to-[#EB1F26] rounded ml-3"></div>
         </div>
         
         <TestimonialCarousel testimonials={testimonials} />

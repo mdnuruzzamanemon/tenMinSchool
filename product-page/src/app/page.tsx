@@ -24,9 +24,9 @@ export default async function ProductPage() {
         <CourseDetails product={product} />
         <Testimonials product={product} />
         <FAQ product={product} />
-      </div>
+        </div>
       
       <Footer />
-    </main>
+      </main>
   );
 }
