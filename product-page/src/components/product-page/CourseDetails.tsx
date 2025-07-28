@@ -4,6 +4,12 @@ import { ProductData } from "@/services/api";
 import Image from "next/image";
 import { useState, useEffect } from "react";
 import CourseTrailerCarousel from "../ui/CourseTrailerCarousel";
+import FreePdfDownload from "../ui/FreePdfDownload";
+import ContentPreview from "../ui/ContentPreview";
+import FreeItems from "../ui/FreeItems";
+import Requirements from "../ui/Requirements";
+import PaymentInstructions from "../ui/PaymentInstructions";
+import CourseExclusiveFeatures from "../ui/CourseExclusiveFeatures";
 
 interface CourseDetailsProps {
   product: ProductData;
@@ -39,6 +45,28 @@ interface AboutItem {
   icon: string;
 }
 
+// Define types for the PDF download data
+interface PdfDownloadData {
+  title: string;
+  description: string;
+  thumbnail: string;
+  cta: {
+    text: string;
+    clicked_url: string;
+  };
+  top_left_icon_img?: string;
+}
+
+// Add new interface for exclusive features
+interface ExclusiveFeature {
+  id: string;
+  title: string;
+  checklist: string[];
+  file_url: string;
+  file_type: string;
+  video_thumbnail?: string;
+}
+
 export default function CourseDetails({ product }: CourseDetailsProps) {
   const [activeFeature, setActiveFeature] = useState<string | null>(null);
   const [visibleSections, setVisibleSections] = useState<string[]>([]);
@@ -61,6 +89,123 @@ export default function CourseDetails({ product }: CourseDetailsProps) {
   const aboutSection = product.sections.find(section => section.type === "about");
   const aboutItems = aboutSection?.values as AboutItem[] || [];
   
+  // Extract group join engagement section for PDF download
+  const groupJoinSection = product.sections.find(section => section.type === "group_join_engagement");
+  const pdfDownloadData = groupJoinSection?.values?.[0] as PdfDownloadData | undefined;
+  
+  // Extract content preview section
+  const contentPreviewSection = product.sections.find(section => section.type === "content_preview");
+  
+  // Create content preview items
+  const contentPreviewItems = [
+    {
+      id: "content-1",
+      title: "Video: IELTS: Introduction",
+      type: "video"
+    },
+    {
+      id: "content-2",
+      title: "Video: IELTS: Overview",
+      type: "video"
+    },
+    {
+      id: "content-3",
+      title: "Video: How to Prepare for IELTS?",
+      type: "video"
+    },
+    {
+      id: "content-4",
+      title: "Video: Making a Daily Routine",
+      type: "video"
+    },
+    {
+      id: "content-5",
+      title: "Video: Different Sentence Structures to Improve Writing",
+      type: "video"
+    },
+    {
+      id: "content-6",
+      title: "IELTS General Facts",
+      type: "document"
+    },
+    {
+      id: "content-7",
+      title: "IELTS Vocabulary",
+      type: "document"
+    }
+  ];
+  
+  // Extract free items section
+  const freeItemsSection = product.sections.find(section => section.type === "free_items");
+  
+  // Create free items
+  const freeItems = [
+    {
+      id: "free-1",
+      title: "১টি ফ্রি হার্ডকপি বই",
+      icon: "https://cdn.10minuteschool.com/images/PDP/course-fact-icons/digital-book_work-book.png"
+    },
+    {
+      id: "free-2",
+      title: "ফেসবুক সাপোর্ট গ্রুপ",
+      icon: "https://cdn.10minuteschool.com/images/PDP/course-fact-icons/facebook-community.png"
+    },
+    {
+      id: "free-3",
+      title: "কোর্সের মেয়াদ আজীবন",
+      icon: "https://cdn.10minuteschool.com/images/PDP/course-fact-icons/time-limit.png"
+    }
+  ];
+  
+  // Extract requirements section
+  const requirementsSection = product.sections.find(section => section.type === "requirements");
+  
+  // Create requirements
+  const requirements = [
+    {
+      id: "req-1",
+      title: "স্মার্টফোন, ট্যাব বা কম্পিউটার",
+      icon: "https://cdn.10minuteschool.com/images/PDP/course-fact-icons/video.png"
+    },
+    {
+      id: "req-2",
+      title: "ইন্টারনেট সংযোগ",
+      icon: "https://cdn.10minuteschool.com/images/PDP/course-fact-icons/time.png"
+    }
+  ];
+  
+  // Extract payment instructions section
+  const paymentSection = product.sections.find(section => section.type === "how_to_pay");
+  
+  // Create payment methods
+  const paymentMethods = [
+    {
+      id: "payment-1",
+      name: "বিকাশ",
+      icon: "https://cdn.10minuteschool.com/images/payment-icons/bkash.png",
+      videoUrl: "5wfn60rmWX4"
+    },
+    {
+      id: "payment-2",
+      name: "নগদ",
+      icon: "https://cdn.10minuteschool.com/images/payment-icons/nagad.png"
+    },
+    {
+      id: "payment-3",
+      name: "রকেট",
+      icon: "https://cdn.10minuteschool.com/images/payment-icons/rocket.png"
+    },
+    {
+      id: "payment-4",
+      name: "কার্ড",
+      icon: "https://cdn.10minuteschool.com/images/payment-icons/card.png"
+    }
+  ];
+  
+  // Extract feature explanations section
+  const featureExplanationsSection = product.sections.find(section => section.type === "feature_explanations");
+  const exclusiveFeatures = featureExplanationsSection?.values as ExclusiveFeature[] || [];
+  
   // Set the first about item as active by default
   useEffect(() => {
     if (aboutItems.length > 0 && !activeTab) {
@@ -80,7 +225,7 @@ export default function CourseDetails({ product }: CourseDetailsProps) {
       setScrollY(window.scrollY);
       
       // Check which sections are in viewport
-      const sections = ["instructors", "features", "pointers", "about"];
+      const sections = ["instructors", "features", "pointers", "about", "pdf-download", "content-preview", "free-items", "requirements", "payment", "exclusive-features"];
       const newVisibleSections = sections.filter(section => {
         const element = document.getElementById(section);
         if (!element) return false;
@@ -190,6 +335,24 @@ export default function CourseDetails({ product }: CourseDetailsProps) {
             </section>
           )}
           
+          {/* PDF Download Section */}
+          {pdfDownloadData && (
+            <section id="pdf-download" className="mb-12 relative">
+              <div className="flex items-center mb-6 sticky top-20 bg-white/80 backdrop-blur-sm z-10 py-2">
+                <div className="h-1 w-10 bg-gradient-to-r from-indigo-500 to-purple-500 rounded mr-3"></div>
+                <h2 className="text-2xl font-bold">ফ্রি PDF Download করুন</h2>
+              </div>
+              <FreePdfDownload
+                title={pdfDownloadData.title}
+                description={pdfDownloadData.description}
+                thumbnail={pdfDownloadData.thumbnail}
+                ctaText={pdfDownloadData.cta.text}
+                ctaUrl={pdfDownloadData.cta.clicked_url}
+                iconUrl={pdfDownloadData.top_left_icon_img}
+              />
+            </section>
+          )}
+          
           {/* What You'll Learn Section */}
           {pointersSection && pointers.length > 0 && (
             <section id="pointers" className="mb-12 relative">
@@ -214,6 +377,34 @@ export default function CourseDetails({ product }: CourseDetailsProps) {
                   ))}
                 </ul>
               </div>
+            </section>
+          )}
+          
+          {/* Course Exclusive Features Section */}
+          {featureExplanationsSection && exclusiveFeatures.length > 0 && (
+            <section id="exclusive-features" className="mb-12 relative">
+              <div className="flex items-center mb-6 sticky top-20 bg-white/80 backdrop-blur-sm z-10 py-2">
+                <div className="h-1 w-10 bg-gradient-to-r from-indigo-500 to-purple-500 rounded mr-3"></div>
+                <h2 className="text-2xl font-bold">{featureExplanationsSection.name}</h2>
+              </div>
+              <CourseExclusiveFeatures
+                title={featureExplanationsSection.name}
+                features={exclusiveFeatures}
+              />
+            </section>
+          )}
+          
+          {/* Content Preview Section */}
+          {contentPreviewSection && (
+            <section id="content-preview" className="mb-12 relative">
+              <div className="flex items-center mb-6 sticky top-20 bg-white/80 backdrop-blur-sm z-10 py-2">
+                <div className="h-1 w-10 bg-gradient-to-r from-indigo-500 to-purple-500 rounded mr-3"></div>
+                <h2 className="text-2xl font-bold">{contentPreviewSection.name || "কন্টেন্ট প্রিভিউ"}</h2>
+              </div>
+              <ContentPreview
+                title={contentPreviewSection.name || "কন্টেন্ট প্রিভিউ"}
+                items={contentPreviewItems}
+              />
             </section>
           )}
           
@@ -290,6 +481,48 @@ export default function CourseDetails({ product }: CourseDetailsProps) {
                   </div>
                 ))}
               </div>
+            </section>
+          )}
+          
+          {/* Free Items Section */}
+          {freeItemsSection && (
+            <section id="free-items" className="mb-12 relative">
+              <div className="flex items-center mb-6 sticky top-20 bg-white/80 backdrop-blur-sm z-10 py-2">
+                <div className="h-1 w-10 bg-gradient-to-r from-indigo-500 to-purple-500 rounded mr-3"></div>
+                <h2 className="text-2xl font-bold">{freeItemsSection.name || "এই কোর্সের সাথে ফ্রি পাচ্ছেন–"}</h2>
+              </div>
+              <FreeItems
+                title={freeItemsSection.name || "এই কোর্সের সাথে ফ্রি পাচ্ছেন–"}
+                items={freeItems}
+              />
+            </section>
+          )}
+          
+          {/* Requirements Section */}
+          {requirementsSection && (
+            <section id="requirements" className="mb-12 relative">
+              <div className="flex items-center mb-6 sticky top-20 bg-white/80 backdrop-blur-sm z-10 py-2">
+                <div className="h-1 w-10 bg-gradient-to-r from-indigo-500 to-purple-500 rounded mr-3"></div>
+                <h2 className="text-2xl font-bold">{requirementsSection.name || "ক্লাস করার জন্য প্রয়োজন হবে"}</h2>
+              </div>
+              <Requirements
+                title={requirementsSection.name || "ক্লাস করার জন্য প্রয়োজন হবে"}
+                requirements={requirements}
+              />
+            </section>
+          )}
+          
+          {/* Payment Instructions Section */}
+          {paymentSection && (
+            <section id="payment" className="mb-12 relative">
+              <div className="flex items-center mb-6 sticky top-20 bg-white/80 backdrop-blur-sm z-10 py-2">
+                <div className="h-1 w-10 bg-gradient-to-r from-indigo-500 to-purple-500 rounded mr-3"></div>
+                <h2 className="text-2xl font-bold">{paymentSection.name || "যেভাবে পেমেন্ট করবেন"}</h2>
+              </div>
+              <PaymentInstructions
+                title={paymentSection.name || "যেভাবে পেমেন্ট করবেন"}
+                paymentMethods={paymentMethods}
+              />
             </section>
           )}
         </div>
