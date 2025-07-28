@@ -1,0 +1,36 @@
+<svg width="1440" height="800" viewBox="0 0 1440 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Grid pattern -->
+  <pattern id="grid" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+    <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(99, 102, 241, 0.05)" stroke-width="0.5"/>
+  </pattern>
+  <rect width="100%" height="100%" fill="url(#grid)" />
+  
+  <!-- Dots pattern -->
+  <pattern id="dots" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+    <circle cx="2" cy="2" r="1" fill="rgba(139, 92, 246, 0.1)"/>
+  </pattern>
+  <rect width="100%" height="100%" fill="url(#dots)" />
+  
+  <!-- Larger circles -->
+  <circle cx="200" cy="200" r="100" fill="url(#gradient1)" opacity="0.05" />
+  <circle cx="1200" cy="600" r="150" fill="url(#gradient2)" opacity="0.05" />
+  <circle cx="600" cy="400" r="80" fill="url(#gradient3)" opacity="0.05" />
+  
+  <!-- Gradients -->
+  <defs>
+    <radialGradient id="gradient1" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(200 200) rotate(90) scale(100)">
+      <stop stop-color="#4F46E5"/>
+      <stop offset="1" stop-color="#4F46E5" stop-opacity="0"/>
+    </radialGradient>
+    
+    <radialGradient id="gradient2" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1200 600) rotate(90) scale(150)">
+      <stop stop-color="#7C3AED"/>
+      <stop offset="1" stop-color="#7C3AED" stop-opacity="0"/>
+    </radialGradient>
+    
+    <radialGradient id="gradient3" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(600 400) rotate(90) scale(80)">
+      <stop stop-color="#EC4899"/>
+      <stop offset="1" stop-color="#EC4899" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+</svg> 
